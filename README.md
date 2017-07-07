@@ -17,65 +17,7 @@ This package comes without any dependency configuration in the composer.json fil
 A basic installation via Composer could be done this way:
 
 ```bash
-$ composer require setasign/fpdi:1.6.2
-```
-
-or you can include the following in your composer.json file:
-
-```json
-{
-    "require": {
-        "setasign/fpdi": "1.6.2"
-    }
-}
-```
-
-### Evaluate Dependencies Automatically
-
-To load dependencies automatically we prepared kind of metadata packages. To use FPDI with FPDF use [this](https://github.com/Setasign/FPDI-FPDF) package:
-
-```json
-{
-    "require": {
-        "setasign/fpdi-fpdf": "1.6.2"
-    }
-}
-```
-
-For TCPDF use [this](https://github.com/Setasign/FPDI-TCPDF):
-
-```json
-{
-    "require": {
-        "setasign/fpdi-tcpdf": "1.6.2"
-    }
-}
-```
-
-### Manual Dependencies
-
-To support both FPDF and TCPDF its up to you to load the preferred package before the classes of FPDI are loaded. By default FPDI will extend FPDF. If the TCPDF class exists, a new FPDF class will be created which will extend TCPDF while FPDI will extend this.
-
-To use FPDI with FPDF include following in your composer.json file:
-
-```json
-{
-    "require": {
-        "setasign/fpdf": "1.8",
-        "setasign/fpdi": "1.6.2"
-    }
-}
-```
-
-If you are using TCPDF, your have to update your composer.json respectively to:
-
-```json
-{
-    "require": {
-        "tecnickcom/tcpdf": "6.2.13",
-        "setasign/fpdi": "1.6.2"
-    }
-}
+$ composer require jasonll/fpdi:1.6.2
 ```
 
 Additionally you have to trigger composers autoloader for the TCPDF class before you are initiating FPDI:
