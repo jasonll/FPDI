@@ -16,7 +16,15 @@
  * This way it is possible to use FPDI for both FPDF and TCPDF with one FPDI version.
  */
 
-if (!class_exists('TCPDF', false)) {
+if (!class_exists('PDF_Chinese', false)) {
+    /**
+     * Class fpdi_bridge
+     */
+    class fpdi_bridge extends PDF_Chinese
+    {
+        // empty body
+    }
+} elseif (!class_exists('TCPDF', false)) {
     /**
      * Class fpdi_bridge
      */
@@ -24,7 +32,6 @@ if (!class_exists('TCPDF', false)) {
     {
         // empty body
     }
-
 } else {
 
     /**
