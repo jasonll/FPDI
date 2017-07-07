@@ -17,7 +17,7 @@ This package comes without any dependency configuration in the composer.json fil
 A basic installation via Composer could be done this way:
 
 ```bash
-$ composer require jasonll/fpdi:1.0.1
+$ composer require jasonll/chinese_fpdi
 ```
 fpdi 支持中文包
 
